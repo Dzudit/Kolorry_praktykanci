@@ -6,11 +6,16 @@ import ResultRectangle from './container/resultRectangle'
 function App() {
 
   const [rectColor, setRectColor] = useState("yellow");
+  const [numberToAdd, setNumberToAdd] = useState(0);
+
+  // useEffect(()=>{
+  //   console.log("number to Add is changed", numberToAdd );
+  // }, [numberToAdd]);
 
   return (
     <div className="App">
-        <ColorSquares setColor={setRectColor}/>
-        <ResultRectangle color={rectColor}/>
+        <ColorSquares setColor={setRectColor} setNumberToAdd={setNumberToAdd}/>
+        <ResultRectangle color={rectColor} numberToAddProps={numberToAdd}/>
     </div>
   );
 }

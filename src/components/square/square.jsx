@@ -1,10 +1,12 @@
 import React from "react";
 import "./square.css";
-//  (props) props.color albo {color, innaZmienna} -- destrukturyzacja w JS poczytac 
-export function Square({color, setColor}){
+import MiniSquare from "../miniSquare/miniSquare";
+
+export function Square({color, setColor, setNumberToAdd}){
 
     return (
-        <div className="square" style={{backgroundColor: color}} onClick={()=> { console.log("clicked", color); setColor(color)}}>    
+        <div className="square" style={{backgroundColor: color}} onClick={()=> {  setColor(color)}}>   
+            <MiniSquare setNumberToAdd={setNumberToAdd}/> 
         </div>
     )
 }

@@ -2,6 +2,7 @@
     width:  300px;
     height: 600px;
     border: 2px solid black;
+    color: white;
 }
 .squaresContainer {
     display: flex;
